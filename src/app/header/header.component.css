@@ -1,0 +1,8 @@
+byte-menu-dropdown {
+    list-style-type: none;
+}
+
+.active {
+    font-weight: bold !important;
+    color: white !important;
+}

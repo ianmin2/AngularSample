@@ -1,0 +1,6 @@
+<div class="dropdown">
+    <button class="btn dropdown-toggle {{mainClass}}" type="button" data-toggle="dropdown" id="recipeHandler" aria-haspopup="true" aria-expanded="false" [innerText]="title"></button>
+    <div [ngClass]="{'dropdown-menu-right': getAlignment()}" class="dropdown-menu" aria-labelledby="recipeHandler">
+        <a *ngFor="let menuItem of subMenuItems" href="{{menuItem.targetUrl}}" class="dropdown-item {{customClass}}" (click)="menuItem.action">{{menuItem.title}}</a>
+    </div>
+</div>

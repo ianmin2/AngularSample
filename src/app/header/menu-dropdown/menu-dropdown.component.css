@@ -1,0 +1,17 @@
+.bg-black {
+    background-color: #2D2D2D !important;
+    color: white !important;
+    transition-duration: 100ms;
+}
+
+.bg-black>*>.dropdown-item {
+    color: white !important;
+    transition-duration: 100ms;
+}
+
+.bg-black>*>.dropdown-item:hover {
+    color: #E10A0A !important;
+    transform: skewY(-1.5deg);
+    font-weight: bold;
+    transition-duration: 300ms;
+}

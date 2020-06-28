@@ -1,0 +1,9 @@
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+.list-item-group {
+    color: black !important;
+    text-decoration: none !important;
+}

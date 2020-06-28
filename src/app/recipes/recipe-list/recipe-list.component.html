@@ -1,0 +1,10 @@
+<div class="row padding">
+    <div class="col-12">
+        <button class="btn btn-success btn-block">New Recipe</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 list-group">
+        <app-recipe-item *ngFor="let recipeItem of recipes" [recipe]="recipeItem" (recipeSelected)="selectRecipeItem(recipeItem)"></app-recipe-item>
+    </div>
+</div>

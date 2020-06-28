@@ -1,0 +1,24 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black" style="background-color: #E10A0A;">
+    <a class="navbar-brand bg-main logo" href="#">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <byte-menu-button [ngClass]="{'active':isPathSelected('Recipes')}" customClass="" title="Recipes" (pathSelected)="implementPath($event)" targetUrl="#"></byte-menu-button>
+            <byte-menu-button [ngClass]="{'active':isPathSelected('Shopping List')}" customClass="" title="Shopping List" targetUrl="#" (pathSelected)="implementPath($event)"></byte-menu-button>
+        </ul>
+
+        <ul class="navbar-nav">
+
+            <byte-menu-dropdown isAlignedRight="true" title="Manage" targetUrl="#" customClass="" subMenuItems="[
+              { 'customClass': '', 'targetUrl': '#', 'title': 'Save Data', 'isolated': false, 'action': null },
+              { 'customClass': '', 'targetUrl': '#', 'title': 'Fetch Data', 'isolated': false, 'action': null },
+              {'customClass': '', 'targetUrl': '#', 'title': 'Something Else Here', 'isolated': true, 'action': null }
+              ]"></byte-menu-dropdown>
+
+        </ul>
+        <!-- <byte-menu-right></byte-menu-right> -->
+    </div>
+</nav>
