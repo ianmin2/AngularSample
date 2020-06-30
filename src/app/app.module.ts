@@ -23,6 +23,8 @@ import { UiModalComponent } from './ui/ui-modal/ui-modal.component';
 import { HighlightElementDirective } from './directives/highlight-element.directive';
 import { DangerElementDirective } from './directives/danger-element.directive';
 import { MouseOverStylingDirective } from './directives/mouse-over-styling.directive';
+import { CustomIfDirective } from './directives/custom-if.directive';
+import { LiteDropdownDirective } from './directives/lite-dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { MouseOverStylingDirective } from './directives/mouse-over-styling.direc
     UiModalComponent,
     HighlightElementDirective,
     DangerElementDirective,
-    MouseOverStylingDirective
+    MouseOverStylingDirective,
+    CustomIfDirective,
+    LiteDropdownDirective
   ],
   imports: [
     BrowserModule,
