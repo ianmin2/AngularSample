@@ -1,3 +1,4 @@
+import { RecipeService } from './../services/recipe.service';
 import { Recipe } from './recipes.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,16 +11,14 @@ export class RecipesComponent implements OnInit {
 
   activeRecipe: Recipe;
 
-  constructor() { }
+  constructor(private recipeService:RecipeService) { }
 
   ngOnInit(): void {
-  }
-
-  updateActiveRecipe(recipe:Recipe){
-    this.activeRecipe = recipe;
-    console.log(`\n\n____________________________________\nACTIVE RECIPE UPDATED TO:`);
-    console.dir(this.activeRecipe);
-    console.log(`____________________________________`);
+    this.recipeService.recipeSelected.subscribe(
+      (recipe:Recipe) => {
+        this.activeRecipe = recipe;
+      }
+    );
   }
 
 }

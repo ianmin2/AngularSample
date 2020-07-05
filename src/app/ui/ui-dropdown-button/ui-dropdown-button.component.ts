@@ -1,3 +1,4 @@
+import { LiteLoggerService } from './../../services/lite-logger.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -15,8 +16,10 @@ export class UiDropdownButtonComponent implements OnInit {
   @Input() subMenuItems: any = "";
   @Input() isAlignedRight:string = "";
 
+  @Input() callback:Function = () => { console.log('Nada!')};
 
-  constructor() {
+
+  constructor(private logger:LiteLoggerService) {
 
    }
 
@@ -29,8 +32,18 @@ export class UiDropdownButtonComponent implements OnInit {
     .match(rgx)
     .map(itm=>JSON.parse(itm),[]);
 
+    // let cb = `(function ${this.callback})`.toString();
+    // this.callback = eval(cb);
+
 
   }
+
+  // runCallback()
+  // {
+  //   this.logger.log(`Attempting to execute ${this.callback} of type ${typeof this.callback}`);
+
+  //   // eval(this.callback);
+  // }
 
 
   getAlignment()

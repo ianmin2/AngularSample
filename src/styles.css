@@ -463,3 +463,7 @@ nav {
     text-shadow: 1px 1px #2D2D2D !important;
     transition-duration: 50ms !important;
 }
+
+.dropdown-item {
+    cursor: pointer !important;
+}

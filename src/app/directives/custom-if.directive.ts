@@ -14,6 +14,6 @@ export class CustomIfDirective {
 
   }
 }
-  constructor(private vcRef:ViewChild) { }
+  constructor(private vcRef:ViewChild, ) { }
 
 }
