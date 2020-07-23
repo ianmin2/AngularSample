@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MenuButtonComponent implements OnInit {
 
-  @Output() pathSelected = new EventEmitter<string>();
+  // @Output() pathSelected = new EventEmitter<string>();
 
   @Input() customClass:string;
   @Input() targetUrl:string;
@@ -18,10 +18,10 @@ export class MenuButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSelect(path:string)
-  {
-    // console.log(`\n\n=========================================================\n@menu-button onSelect selecting '${path}'\n=========================================================\n\n`)
-    this.pathSelected.emit(path);
-  }
+  // onSelect(path:string)
+  // {
+  //   // console.log(`\n\n=========================================================\n@menu-button onSelect selecting '${path}'\n=========================================================\n\n`)
+  //   this.pathSelected.emit(path);
+  // }
 
 }

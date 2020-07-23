@@ -1,17 +1,17 @@
 <!-- (pathSelected)="implementPath($event)" -->
 <!-- (implementPath)="displaySelectedComponent($event)" -->
 
-<app-header (selectPath)="displaySelectedComponent($event)"></app-header>
-<div class="container-fluid padding">
-    <app-recipes *ngIf="isSelectedButtonComponent('ReciPes')"></app-recipes>
+<app-header></app-header>
 
-    <app-shopping-list *ngIf="isSelectedButtonComponent('ShoPping List')"></app-shopping-list>
-
-    <!-- <app-ui-modal openClass="btn-success" opnText="Modal un"></app-ui-modal>
-    <app-ui-modal openClass="btn-danger" openText="Modal deux"></app-ui-modal> -->
+<div class="container-fluid padding ">
+    <router-outlet></router-outlet>
 </div>
 
+
+<!-- <app-ui-modal openClass="btn-success " opnText="Modal un "></app-ui-modal>
+    <app-ui-modal openClass="btn-danger " openText="Modal deux "></app-ui-modal> -->
+
 <!-- <div class="container-fluid padding ">
-    <input type="text" [(ngModel)]="name">
+    <input type="text " [(ngModel)]="name ">
     <h3>{{name}}</h3>
 </div> -->

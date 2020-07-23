@@ -458,12 +458,20 @@ nav {
 }
 
 .app-list-background {
-    background-color: #2D2D2D !important;
+    background-color: rgba(45, 45, 45, .5) !important;
     color: white !important;
-    text-shadow: 1px 1px #2D2D2D !important;
+    text-shadow: 1px 1px darkslategray !important;
     transition-duration: 50ms !important;
 }
 
 .dropdown-item {
     cursor: pointer !important;
+}
+
+a.list-group-item.clearfix.active {
+    background-color: #2D2D2D !important;
+    color: white !important;
+    text-shadow: 1px 1px #2D2D2D !important;
+    transition-duration: 50ms !important;
+    border-color: white !important;
 }

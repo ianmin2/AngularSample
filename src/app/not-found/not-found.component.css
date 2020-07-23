@@ -1,0 +1,72 @@
+.uno {
+    color: #2D2D2D;
+    text-shadow: .04em .02em lightgrey;
+}
+
+.dos {
+    color: #FFFFFF;
+    /* text-shadow: 2px 2px #E11808; */
+    text-shadow: .04em .02em #2D2D2D;
+}
+
+.tres {
+    color: #E11808;
+    text-shadow: .04em .02em #2D2D2D;
+}
+
+span {
+    border-bottom: .02em solid #2d2d2d;
+    transform: skewY(5.5deg);
+    margin: 0 0 .7em 0 !important;
+}
+
+.not-found-text {
+    color: white !important;
+    background-color: black !important;
+    margin: 0.3em !important;
+    text-shadow: .05em .04em gray !important;
+    font-size: 1.3em !important;
+    font-style: italic !important;
+    box-shadow: 0.1em 0.2em lightgrey !important;
+    padding: 0.4em !important;
+    border-radius: .25em .5em .75em 1em;
+}
+
+.container {
+    padding: 2em;
+}
+
+.homing-button {
+    margin: 0 auto;
+    max-width: 9em;
+    min-width: 9em;
+    min-height: 9em;
+    max-height: 9em;
+    text-align: center;
+    padding: 1em;
+    border-radius: 10em;
+    box-shadow: 0.4em 0.4em #2D2D2D !important;
+    transition-duration: 1s;
+}
+
+.homing-button:hover {
+    transition-duration: 1s;
+    box-shadow: 0.4em 0.4em #E11808 !important;
+}
+
+a {
+    margin-top: 3.5em;
+    text-decoration: none !important;
+    font-size: .8em;
+    color: black !important;
+    font-weight: bold;
+    text-shadow: .05em .04em lightgrey !important;
+    border: .2em solid #2d2d2d;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: #2D2D2D !important;
+    text-shadow: .05em .04em #2D2D2D !important;
+    border: .2em solid #E11808;
+}

@@ -6,8 +6,8 @@
 
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-            <byte-menu-button [ngClass]="{'active':isPathSelected('Recipes')}" customClass="" title="Recipes" (pathSelected)="implementPath($event)" targetUrl="#"></byte-menu-button>
-            <byte-menu-button [ngClass]="{'active':isPathSelected('Shopping List')}" customClass="" title="Shopping List" targetUrl="#" (pathSelected)="implementPath($event)"></byte-menu-button>
+            <byte-menu-button customClass="" title="Recipes" targetUrl="/recipes"></byte-menu-button>
+            <byte-menu-button customClass="" title="Shopping List" targetUrl="/shopping-list"></byte-menu-button>
         </ul>
 
         <ul class="navbar-nav">
@@ -15,7 +15,7 @@
             <byte-menu-dropdown isAlignedRight="true" title="Manage" targetUrl="#" customClass="" subMenuItems="[
               { 'customClass': '', 'targetUrl': '#', 'title': 'Save Data', 'isolated': false, 'action': null },
               { 'customClass': '', 'targetUrl': '#', 'title': 'Fetch Data', 'isolated': false, 'action': null },
-              {'customClass': '', 'targetUrl': '#', 'title': 'Something Else Here', 'isolated': true, 'action': null }
+              {'customClass': '', 'targetUrl': '/nada', 'title': 'Something Else Here', 'isolated': true, 'action': null }
               ]"></byte-menu-dropdown>
 
         </ul>

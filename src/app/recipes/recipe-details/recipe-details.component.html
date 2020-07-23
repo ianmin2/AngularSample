@@ -1,43 +1,42 @@
 <div class="row">
     <div class="col-12">
-        <img src="" alt="" class="img-responsive img-thumbnail">
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-12">
         <h1 appHighlightElement style="text-decoration: underline;">{{currentRecipe.name}}</h1>
     </div>
 </div>
 <div class="row">
     <div class="col-12">
-        <i style="color: darkslategrey;">{{currentRecipe.description}}</i>
+        <img [src]="currentRecipe.imagePath" alt=" " class="img-responsive img-thumbnail " style="max-height: 12em !important;">
+    </div>
+</div>
+<div class="row ">
+    <div class="col-12 ">
+        <i style="color: darkslategrey; ">{{currentRecipe.description}}</i>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-12">
-        <h6 style="font-weight: bold; color:crimson;text-decoration: underline;">Ingredients</h6>
+<div class="row ">
+    <div class="col-12 ">
+        <h6 style="font-weight: bold; color:crimson;text-decoration: underline; ">Ingredients</h6>
     </div>
-    <div class="col-12">
-        <ul class="list-group">
-            <li *ngFor="let ingredient of currentRecipe.ingredients" class="list-group-item">
+    <div class="col-12 ">
+        <ul class="list-group ">
+            <li *ngFor="let ingredient of currentRecipe.ingredients " class="list-group-item ">
                 {{ingredient.name}} - {{ingredient.amount}}
             </li>
         </ul>
     </div>
 </div>
 <hr>
-<div class="row">
+<div class="row ">
 
-    <div class="col-12">
+    <div class="col-12 ">
 
-        <div class="dropdown">
+        <div class="dropdown ">
             <button class="btn dropdown-toggle btn-danger" type="button" data-toggle="dropdown" id="recipeHandler" aria-haspopup="true" aria-expanded="false">Manage Recipe</button>
             <div class="dropdown-menu" aria-labelledby="recipeHandler">
-                <a class="dropdown-item" (click)="addToShoppingList()">To Shopping List</a>
-                <a class="dropdown-item" (click)="editRecipe()">Edit Recipe</a>
-                <a class="dropdown-item" (click)="deleteRecipe()">Delete Recipe</a>
+                <a class="dropdown-item " (click)="addToShoppingList()">To Shopping List</a>
+                <a class="dropdown-item " (click)="editRecipe()">Edit Recipe</a>
+                <a class="dropdown-item " (click)="deleteRecipe()">Delete Recipe</a>
             </div>
         </div>
 

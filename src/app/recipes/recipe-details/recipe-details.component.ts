@@ -2,7 +2,8 @@ import { ShoppingListService } from './../../services/shopping-list.service';
 import { RecipeService } from './../../services/recipe.service';
 import { LiteLoggerService } from './../../services/lite-logger.service';
 import { Recipe } from './../recipes.model';
-import { Component, OnInit, Input, AfterContentInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-details',
@@ -11,13 +12,16 @@ import { Component, OnInit, Input, AfterContentInit } from '@angular/core';
 })
 export class RecipeDetailsComponent implements OnInit {
 
+  currentRecipe:Recipe;
+  recipeID:number;
 
-  @Input() currentRecipe:Recipe;
-
-  constructor(private logger:LiteLoggerService, private recipeService:RecipeService, private shoppingListService:ShoppingListService) { }
+  constructor(private logger:LiteLoggerService, private recipeService:RecipeService, private shoppingListService:ShoppingListService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-
+    this.route.params.subscribe((params:Params) => {
+      this.currentRecipe =  this.recipeService.getRecipe(params.id);
+      this.recipeID = +params.id;
+    });
   }
 
   addToShoppingList()
@@ -30,11 +34,13 @@ export class RecipeDetailsComponent implements OnInit {
   deleteRecipe()
   {
     this.logger.log("Triggering a recipe deletion.");
+    this.recipeService.deleteRecipe(this.recipeID);
+    this.router.navigate(['..'],{relativeTo: this.route});
   }
 
   editRecipe()
   {
-    this.logger.log("Triggering Recipe Edit.");
+    this.router.navigate(['edit'],{relativeTo:this.route});
   }
 
 

@@ -4,9 +4,10 @@
     </div>
 
     <div class="col-md-7">
-        <app-recipe-details *ngIf="activeRecipe; else noActiveRecipe" [currentRecipe]="activeRecipe"></app-recipe-details>
+        <!-- <app-recipe-details *ngIf="activeRecipe; else noActiveRecipe" [currentRecipe]="activeRecipe"></app-recipe-details>
         <ng-template #noActiveRecipe>
             <p appDangerElement>Awaiting recipe selection!</p>
-        </ng-template>
+        </ng-template>  -->
+        <router-outlet></router-outlet>
     </div>
 </div>

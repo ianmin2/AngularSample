@@ -26,6 +26,9 @@ import { DangerElementDirective } from './directives/danger-element.directive';
 import { MouseOverStylingDirective } from './directives/mouse-over-styling.directive';
 import { CustomIfDirective } from './directives/custom-if.directive';
 import { LiteDropdownDirective } from './directives/lite-dropdown.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { RecipePlaceholderComponent } from './recipes/recipe-placeholder/recipe-placeholder.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { LiteDropdownDirective } from './directives/lite-dropdown.directive';
     DangerElementDirective,
     MouseOverStylingDirective,
     CustomIfDirective,
-    LiteDropdownDirective
+    LiteDropdownDirective,
+    NotFoundComponent,
+    RecipePlaceholderComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

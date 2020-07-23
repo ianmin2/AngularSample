@@ -5,7 +5,7 @@
     <div [ngClass]="{'dropdown-menu-right': getAlignment()}" class="dropdown-menu  bg-black" aria-labelledby="navbarDropdown">
         <span *ngFor="let menuItem of subMenuItems">
             <div *ngIf="menuItem.isolated" class="dropdown-divider"></div>
-            <a href="{{menuItem.targetUrl}}" class="dropdown-item {{customClass}}" (click)="menuItem.action" >{{menuItem.title}}</a>
+            <a [routerLink]="menuItem.targetUrl" class="dropdown-item {{customClass}}" (click)="menuItem.action" >{{menuItem.title}}</a>
         </span>
 
     </div>

@@ -7,9 +7,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() selectPath = new EventEmitter<string>();
-
-
   selectedPath:string = "Recipes"
 
   title:string;
@@ -22,17 +19,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  implementPath( path: string)
-  {
-    this.selectedPath = path;
-    // console.log(`\n\n=========================================================\n@implementingPath ${path}\n=========================================================\n\n`)
-    this.selectPath.emit(path);
-  }
 
-  isPathSelected(path:string)
-  {
-    // console.log(`\n\n\=======================\n@${path}\n\n`)
-    return this.selectedPath == path;
-  }
+
 
 }
