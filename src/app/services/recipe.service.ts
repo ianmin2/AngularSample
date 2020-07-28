@@ -9,7 +9,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class RecipeService {
 
-  recipeChannel:Subject<Recipe[]> = new Subject<Recipe[]>();
+  recipesChannel:Subject<Recipe[]> = new Subject<Recipe[]>();
 
   recipeSelected = new EventEmitter<Recipe>();
 
@@ -54,7 +54,7 @@ export class RecipeService {
 
   private registerChanges():void
   {
-    this.recipeChannel.next(this.recipes.slice());
+    this.recipesChannel.next(this.recipes.slice());
   }
 
   deleteRecipe(recipeId:number)
